@@ -2,20 +2,11 @@
 import React  from 'react';
 
 export default React.createClass({
-	propTypes: {
-		onChange: React.PropTypes.func,
-		value: React.PropTypes.string
-	},
-	getInitialState() {
-		return {
-			text:''
-		};
-	},
-	onChange(e) {
-		console.log(e);
+	sayHello() {
+		console.log("TextForm/sayHello");
 	},
 	render() {
-		console.log("render")
+		console.log("render TextForm");
 		return (
 			<input type="text"
 			className="form-control"
