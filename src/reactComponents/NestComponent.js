@@ -1,6 +1,6 @@
 'use strict';
 var React = require('react');
-var UntouchableOne = require('src/reactComponents/UntouchableOne.js');
+var UntouchableOne = require('./UntouchableOne.js');
 
 export default React.createClass({
 	calc() {

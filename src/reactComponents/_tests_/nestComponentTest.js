@@ -1,16 +1,16 @@
-var assert = require('assert')
+var assert = require('assert');
 var React = require('react/addons');
 var TestUtils = React.addons.TestUtils;
-var testMocker = require('src/testMocker.js')
+var proxyquire =  require('proxyquire');
 
 var jsdom = require("jsdom");
 global.document = jsdom.jsdom("<!doctype html><html><body></body></html>");
-global.window = document.parentWindow;
+global.window = document.defaultView;
 global.navigator = window.navigator;
 
 describe("#react nestComponent test", function () {
-	var mock={};
-	var NestComponent = testMocker.loadModule("./testSandbox/src/reactComponents/NestComponent.js", mock);
+	var mock = require("react").createClass({render() {return null;}});
+	var NestComponent = proxyquire("../NestComponent.js", {'./UntouchableOne.js': mock});
 
 	it("render NestComponent, but don't render untouchableOne", function () {
 

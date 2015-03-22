@@ -38,7 +38,7 @@ gulp.task('webpack', ['copyIndex'], function (cb) {
 
 gulp.task('test:clean', function (cb) {
 	var rimraf = require('rimraf');
-	rimraf('./compiled/', cb);
+	rimraf('./testSandbox/', cb);
 });
 
 gulp.task('test:compile', ['test:clean'], function () {

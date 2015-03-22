@@ -1,5 +1,5 @@
 'use strict';
-var AsyncUtil = require('src/functions/AsyncUtil.js')
+var AsyncUtil = require('./AsyncUtil.js');
 
 export default {
 	returnComplicatedResult() {
