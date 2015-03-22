@@ -12,7 +12,6 @@
 ```
 npm install -g gulp
 npm install
-ln -s ../src node_modules/
 ```
 
 ## build
